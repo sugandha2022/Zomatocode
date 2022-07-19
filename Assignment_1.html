@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--title of the web page-->
+        <title>Food Court</title>
+        <style>
+            .line1
+            {
+                font-size:large;
+                color:azure;
+                font-weight: bold;
+                float:inline-start;
+            }
+            .line2
+            {
+                font-size:large;
+                color:ivory;
+                font-weight: bold;
+                float:right;
+                display: inline;
+                margin-right: 20px;
+            }
+            
+            
+            .drdown-loc
+            {
+                margin-left: 3px; 
+                height: 36px;
+                width: 350px;
+                margin-bottom: 200px;
+                margin-top: 50px;
+                margin-left: 300px;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                margin-right: 30px;
+            }
+
+            .text-rest
+            {
+                margin-left: 0px; 
+                height: 30px;
+                width: 350px;
+                
+            }
+
+            .wallpaper
+            {
+                position: absolute;
+                height: 490px;
+                width: 1360px;
+                left: 0px;
+                top:0px;
+                z-index: -1;
+                margin: 0px;
+                line-height: 0px;
+            }
+            .head1
+            {
+                font-size:75px ;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-weight: bolder;
+                margin-top: 20px;
+                text-align: center;
+                color: greenyellow;
+                line-height: 1.0;
+            }
+            .head2
+            {
+                font-size: 40px;
+                font-family: Georgia, 'Times New Roman', Times, serif;
+                font-weight: bold;
+                line-height: 0px;
+                /*margin-left: 350px;*/
+                text-align: center;
+                color: white;
+            }
+            .division
+            {
+                box-sizing: border-box;
+                position: relative;
+                padding: 0%;
+                margin: 0px;
+                margin-top: 0px;
+                line-height: 0px;
+                /*display: block;*/
+            }
+
+            /* Clear floats after the columns */
+            .row::after
+            {
+                content: "";
+                display: table;
+                clear: both;
+            }
+            .column
+            {
+                float:left;
+                padding: 10px;
+                /*height: 300px;*/
+            }
+            .left 
+            {
+                 width: 22%;
+            }
+
+            .right 
+            {
+                width: 75%;
+            }
+           .head-display
+           {
+                font-family:poppins;
+                font-size: 25px;
+                font-weight: bold;
+                font-style: normal;
+                font-stretch:normal;
+                letter-spacing: normal;
+                line-height: 2.5;
+                text-align: left;
+                color: blue;
+                margin-top: 10px;
+           }
+           .item-display
+           {
+                font-family:poppins;
+                font-size: 18px;
+                font-weight: lighter;
+                font-style: normal;
+                font-stretch:normal;
+                letter-spacing: normal;
+                line-height: 1.3;
+                text-align: left;
+                color:black;
+                margin-top: 12px;
+           }
+           .item-display1
+           {
+                font-family:poppins;
+                font-size: 20px;
+                font-weight:lighter;
+                font-style: normal;
+                font-stretch:normal;
+                letter-spacing: normal;
+                line-height: 1.3;
+                text-align: left;
+                color:black;
+                margin-top: 12px;
+           }
+           .but-display
+           {
+               display:inline-block;
+               margin-top: 12px;
+               width: auto;
+               margin-left: 50px;
+               background-color: green;
+               color:white;
+               font-weight: bolder;
+               text-align: center;
+               font-family: poppins;
+               border: none;
+               padding: 10px 25px;
+               text-decoration: none;
+               font-size: 16px;
+           }
+           .big
+           {
+               display:inline-block;
+               width: 63%;
+               
+           }
+           .vertical
+           {
+               vertical-align:bottom;
+           }
+           .item
+           {
+               width: 160%;
+               height: 100;
+               box-shadow: 0 3px 6px 0 rgb(0 0 0 / 16%);
+               background-color: #ffffff;
+               margin-bottom: 0px;
+           }
+           .small-item
+           {
+               display: inline-block;
+               width: 10%;
+           }
+           .big-item
+           {
+               display: inline-block;
+               width: 40%;
+           }           
+           .rest-name
+           {
+               font-family: poppins;
+               font-size: 30px;
+               font-weight: 600;
+               font-stretch: normal;
+               line-height: 1.30;
+               letter-spacing: normal;
+               text-align: left;
+               color: #192f60;
+               padding-left: 35px;
+           }
+           .rest-location
+           {
+                font-family: poppins;
+                font-size: 16px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.30;
+                letter-spacing: normal;
+                text-align: left;
+                color: #192f60;
+                padding-left: 35px;
+           }
+           .rest-add
+           {
+                font-family: poppins;
+                font-size: 16px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.30;
+                letter-spacing: normal;
+                text-align: left;
+                color: #192f60;
+                padding-left: 35px;
+           }
+           .margin-left
+           {
+               margin-left: 1%;
+           }
+           .common
+           {
+                font-family: poppins;
+                font-size: 16px;
+                font-weight: 500;
+                font-stretch: normal;
+                font-style: normal;
+                line-height: 1.88;
+                letter-spacing: normal;
+                text-align: left;
+                color: #192f60;
+                padding-left: 0px;
+               
+           }
+           .pagination
+           {
+               display: inline-block;
+               margin-left: 200px;
+           }
+           .pagination a
+           {
+                color: black;
+                float: left;
+                padding: 15px 8px;
+                text-decoration: none;
+                margin-top: 50px;
+                margin-left: 10px;
+                border-radius: 15px;
+                
+           }
+           .pagination a.active 
+           {
+                background-color: #4CAF50;
+                color: white;
+                border-radius: 5px;
+            }
+
+            .pagination a:hover:not(.active) 
+            {
+                background-color: #ddd;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div>
+            <a href="#" class="line2">Log-In</a>
+            <a href="#" class="line2">Sign-Up</a>
+            <a href="#" class="line1">Get the App</a>
+        </div>
+        
+        <div>
+            <h1 class="head1">
+                Indian Food Court
+            </h1>
+        </div>
+        <div>
+            <h2 class="head2">Discover the best Indian Food</h2>
+        </div>
+        <div>
+            <select class="drdown-loc" name="Seclect Resturant" id="selres">
+                <option value="0" selected>Select Location</option>
+                <option value="">Agra</option>
+                <option value="">Ahmedabad</option>
+                <option value="">Allahabad</option>
+                <option value="">Amritsar</option>
+                <option value="">Bangalore</option>
+                <option value="">Bhopal</option>
+                <option value="">Bhubaneshwar</option>
+                <option value="">Bikaner</option>
+                <option value="">Chandigarh</option>
+                <option value="">Chennai</option>  
+                <option value="">Darjeeling</option>
+                <option value="">Dehradun</option>
+                <option value="">Dharamhsala</option>
+                <option value="">Faridabad</option>
+                <option value="">Gangtok</option>
+                <option value="">Gaya</option>
+                <option value="">Ghaziabad</option>
+                <option value="">Goa</option>
+                <option value="">Greater Noida</option>
+                <option value="">Gurgaon</option>
+                <option value="">Guwahati</option>
+                <option value="">Gwalior</option>
+                <option value="">Hyderabad</option>
+                <option value="">Indore</option>
+                <option value="">Jabalpur</option>
+                <option value="">Jaipur</option>
+                <option value="">Jammu</option>
+                <option value="">Kanpur</option>
+                <option value="">Katra</option>
+                <option value="">Kolkata</option>
+                <option value="">Kota</option>
+                <option value="">Lucknow</option>
+                <option value="">Ludhiana</option>
+                <option value="">Madurai</option>
+                <option value="">Mahabaleshwar</option>
+                <option value="">Manali</option>
+                <option value="">Mangalore</option>
+                <option value="">Mumbai</option>
+                <option value="">Mussoorie</option>
+                <option value="">Mysore</option>
+                <option value="">Nagpur</option>
+                <option value="">Nasik</option>
+                <option value="">Navi Mumbai</option>
+                <option value="">New Delhi</option>
+                <option value="">Noida</option>
+                <option value="">Patna</option>
+                <option value="">Pondicherry</option>
+                <option value="">Pune</option>
+                <option value="">Puri</option>
+                <option value="">Rajashthan</option>
+                <option value="">Ranchi</option>
+                <option value="">Shillong</option>
+                <option value="">Shimla</option>
+                <option value="">Surat</option>
+                <option value="">Thiruvanthapuram</option>
+                <option value="">Tripura</option>
+                <option value="">Udaipur</option>
+                <option value="">Ujjain</option>
+                <option value="">Varansi</option>
+                <option value="">Vellore</option>
+                <option value="">Vishakhapatnam</option>
+            </select>
+            <input class="text-rest" type="text" placeholder="Quick Search">
+            <br>
+            
+
+        </div>
+        <div>
+            <img class="wallpaper" src="./IMAGES/Wallpaper.jpeg" alt="Image Here">
+       
+            <div class="division">
+            <div class="row">
+                <div class="column left" style="background-color:whitesmoke;">
+
+                    <!--CATEGORY CHECKBOX-->
+
+                    <div class="head-display">Category </div>
+                                            <div>
+                            <input type="checkbox">
+                            <span class="item-display">Breakfast</span>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <span class="item-display">lunch</span>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <span class="item-display">Dinner</span>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <span class="item-display">Snacks</span>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <span class="item-display">Drinks</span>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <span class="item-display">Nightlife</span>
+                        </div>
+
+                        <!--CUSINE CHECKBOX-->
+
+                        <div class="head-display">Cusine </div>
+                        <div>
+                            <input type="checkbox">
+                            <span class="item-display">North Indian</span>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <span class="item-display">South - Indian</span>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <span class="item-display">Chineese</span>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <span class="item-display">Fast-Food</span>
+                        </div>
+                        <div>
+                            <input type="checkbox">
+                            <span class="item-display">Street-food</span>
+                        </div>
+                        
+                        <!--COST FOR TWO RADIO BUTTON-->
+
+                        <div class="head-display">Price (<span style="font-size: 18px; color:blue;">Cost For Two</span>) </div>
+                        <div>
+                            <input type="radio" name="choice-1">
+                            <span class="item-display1">Less than Rs.500</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="choice-1">
+                            <span class="item-display1">Rs.500 to Rs.1000</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="choice-1">
+                            <span class="item-display1">Rs.1000 - Rs.1500</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="choice-1">
+                            <span class="item-display1">Rs.1500 - Rs.2000</span>
+                        </div>
+                        <div>
+                            <input type="radio" name="choice-1">
+                            <span class="item-display1">Rs.2000 +</span>
+                        </div>
+
+                        <!--COST FOR TWO RADIO BUTTON-->
+
+                        <div class="head-display">Sort </div>
+                        <div>
+                            <input type="radio" name="choice-2">
+                            <span class="item-display">Price -<span style="font-size: 18px; color:black;">Low to High</span> </span>
+                        </div>
+                        <div>
+                            <input type="radio" name="choice-2">
+                            <span class="item-display">Price -<span style="font-size: 18px; color:black;">High to Low</span> </span>
+                        </div>
+
+                        <!--RESET BUTTON-->
+                        <div>
+                            <button type="reset" class="but-display">RESET</button>
+                        </div>
+                    </div>
+
+                <div class="column right" style="background-color:whitesmoke;">
+                    <div class="big vertical">
+                        <div class="item">
+                            <div>
+                                <div class="small-item vertical">
+                                    <img src="./IMAGES/IMG_1.png">
+                                </div>
+                        
+                                <div class="big-item vertical">
+                                    <div class="rest-name">The Big Chilly Bakery</div>
+                                    <div class="rest-location">FORT</div>
+                                    <div class="rest-add">Shop1, Plot-0, samruddhi complex, chincholi</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="margin-left">
+                                <div class="common">
+                                    CUSINES : BAKERY
+                                </div>
+                                <div class="common">
+                                    COST FOR TWO : Rs. 700/-
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border:aquamarine;">
+                    
+                    <div class="big vertical">
+                        <div class="item">
+                            <div>
+                                <div class="small-item vertical">
+                                    <img src="./IMAGES/IMG_2.png">
+                                </div>
+                        
+                                <div class="big-item vertical">
+                                    <div class="rest-name">The Amritsar Dhaba</div>
+                                    <div class="rest-location">KOLKATA</div>
+                                    <div class="rest-add">Shop1, Plot-0, samruddhi complex, chincholi</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="margin-left">
+                                <div class="common">
+                                    CUSINES : NORTH-INDIAN
+                                </div>
+                                <div class="common">
+                                    COST FOR TWO : Rs. 1000/-
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border:aquamarine;">
+                    
+                    <div class="big vertical">
+                        <div class="item">
+                            <div>
+                                <div class="small-item vertical">
+                                    <img src="./IMAGES/IMG_3.png">
+                                </div>
+                        
+                                <div class="big-item vertical">
+                                    <div class="rest-name">Moti Mahal Delux</div>
+                                    <div class="rest-location">NEW-DELHI</div>
+                                    <div class="rest-add">Shop1, Plot-0, samruddhi complex, chincholi</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="margin-left">
+                                <div class="common">
+                                    CUSINES : NORTH-INDIAN / CHINEESE
+                                </div>
+                                <div class="common">
+                                    COST FOR TWO : Rs. 1000/-
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border:aquamarine;">
+                    
+                    <div class="big vertical">
+                        <div class="item">
+                            <div>
+                                <div class="small-item vertical">
+                                    <img src="./IMAGES/IMG_4.png">
+                                </div>
+                        
+                                <div class="big-item vertical">
+                                    <div class="rest-name">The Lemon Tree</div>
+                                    <div class="rest-location">BANGALORE</div>
+                                    <div class="rest-add">Shop1, Plot-0, samruddhi complex, chincholi</div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="margin-left">
+                                <div class="common">
+                                    CUSINES : NORTH-INDIAN / CHINEESE
+                                </div>
+                                <div class="common">
+                                    COST FOR TWO : Rs. 1000/-
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Pagination Block-->
+                    <div class="pagination">
+                        <a href="#"><<</a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a href="#">6</a>
+                        <a href="#">7</a>
+                        <a href="#">8</a>
+                        <a href="#">9</a>
+                        <a href="#">>></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
